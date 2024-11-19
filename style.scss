@@ -1,0 +1,93 @@
+@import './variables';
+@import './functions';
+@import './fonts';
+//extend
+
+*{
+    @include resetCss();
+
+    body{
+        height: 100vh;
+        background-color: $background;
+        @include flexCenter(); 
+    }
+}
+
+.nft-container{
+    padding: 24px 24px 32px;
+    width: 350px;
+    height: 596px;
+    background-color: $card-background;
+    border-radius: 15px;
+
+        .main-image{
+            @include flexCenter();
+            cursor: pointer;    
+        }
+
+        .main-nft{
+            position: relative;
+        }
+
+        #eye-icon{
+            position: absolute;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+        }
+
+        h1{
+            color: $white;
+            font-size: $font-size-large;
+            font-family: $outfit-semibold;
+            padding: 24px 0 16px;
+        }
+
+        .main-p{
+            color: $soft-blue;
+            font-size: $font-size-medium;
+            font-family: $outfit-regular;
+            line-height: 26px;
+        }
+}
+
+.price-time{
+    display: flex;
+    justify-content: space-between; 
+    padding: 24px 0;
+
+    .price{
+        @include flexCenter();
+        gap: 6px;
+        color: $cyan;
+    }
+
+    .time{
+        @include flexCenter();
+        gap: 7px;
+        color: $soft-blue;
+    }
+
+}
+
+.line{
+    border: 1px solid $very-dark-blue;
+    margin-bottom: 16px;
+}
+
+.creator{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .creator-p{
+        color: $soft-blue;
+        font-size: $font-size-small;
+        font-family: $outfit-light;
+    }
+
+    .creator-name{
+        color: $white;
+    }
+}
+
+
